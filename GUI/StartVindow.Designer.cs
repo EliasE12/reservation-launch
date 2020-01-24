@@ -1,4 +1,6 @@
-﻿namespace GUI
+﻿using System;
+
+namespace GUI
 {
 	partial class StartVindow
 	{
@@ -35,16 +37,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.tbCode = new System.Windows.Forms.TextBox();
+            this.cbPrincipal = new System.Windows.Forms.ComboBox();
+            this.cbSalad = new System.Windows.Forms.ComboBox();
+            this.cbStartePlate = new System.Windows.Forms.ComboBox();
+            this.cbProteine = new System.Windows.Forms.ComboBox();
+            this.cbDrinck = new System.Windows.Forms.ComboBox();
+            this.cbSoup = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
+            this.btLoad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -110,60 +112,60 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Principal";
             // 
-            // textBox1
+            // tbCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 7;
+            this.tbCode.Location = new System.Drawing.Point(133, 60);
+            this.tbCode.Name = "tbCode";
+            this.tbCode.Size = new System.Drawing.Size(121, 20);
+            this.tbCode.TabIndex = 7;
             // 
-            // comboBox1
+            // cbPrincipal
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(133, 98);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cbPrincipal.FormattingEnabled = true;
+            this.cbPrincipal.Location = new System.Drawing.Point(133, 98);
+            this.cbPrincipal.Name = "cbPrincipal";
+            this.cbPrincipal.Size = new System.Drawing.Size(121, 21);
+            this.cbPrincipal.TabIndex = 8;
             // 
-            // comboBox2
+            // cbSalad
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(133, 219);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 9;
+            this.cbSalad.FormattingEnabled = true;
+            this.cbSalad.Location = new System.Drawing.Point(133, 219);
+            this.cbSalad.Name = "cbSalad";
+            this.cbSalad.Size = new System.Drawing.Size(121, 21);
+            this.cbSalad.TabIndex = 9;
             // 
-            // comboBox3
+            // cbStartePlate
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(133, 178);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 10;
+            this.cbStartePlate.FormattingEnabled = true;
+            this.cbStartePlate.Location = new System.Drawing.Point(133, 178);
+            this.cbStartePlate.Name = "cbStartePlate";
+            this.cbStartePlate.Size = new System.Drawing.Size(121, 21);
+            this.cbStartePlate.TabIndex = 10;
             // 
-            // comboBox4
+            // cbProteine
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(133, 138);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 11;
+            this.cbProteine.FormattingEnabled = true;
+            this.cbProteine.Location = new System.Drawing.Point(133, 138);
+            this.cbProteine.Name = "cbProteine";
+            this.cbProteine.Size = new System.Drawing.Size(121, 21);
+            this.cbProteine.TabIndex = 11;
             // 
-            // comboBox5
+            // cbDrinck
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(133, 292);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 12;
+            this.cbDrinck.FormattingEnabled = true;
+            this.cbDrinck.Location = new System.Drawing.Point(133, 292);
+            this.cbDrinck.Name = "cbDrinck";
+            this.cbDrinck.Size = new System.Drawing.Size(121, 21);
+            this.cbDrinck.TabIndex = 12;
             // 
-            // comboBox6
+            // cbSoup
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(133, 256);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 13;
+            this.cbSoup.FormattingEnabled = true;
+            this.cbSoup.Location = new System.Drawing.Point(133, 256);
+            this.cbSoup.Name = "cbSoup";
+            this.cbSoup.Size = new System.Drawing.Size(121, 21);
+            this.cbSoup.TabIndex = 13;
             // 
             // label8
             // 
@@ -175,38 +177,40 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Aplicación de Reservas de Almuerzos";
             // 
-            // button1
+            // btSave
             // 
-            this.button1.Location = new System.Drawing.Point(53, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Guardar";
+            this.btSave.Location = new System.Drawing.Point(53, 352);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(75, 23);
+            this.btSave.TabIndex = 17;
+            this.btSave.Text = "Guardar";
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
-            // button2
+            // btLoad
             // 
-            this.button2.Location = new System.Drawing.Point(179, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Cargar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btLoad.Location = new System.Drawing.Point(179, 352);
+            this.btLoad.Name = "btLoad";
+            this.btLoad.Size = new System.Drawing.Size(75, 23);
+            this.btLoad.TabIndex = 16;
+            this.btLoad.Text = "Cargar";
+            this.btLoad.UseVisualStyleBackColor = true;
+            this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // StartVindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 392);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btLoad);
+            this.Controls.Add(this.btSave);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbSoup);
+            this.Controls.Add(this.cbDrinck);
+            this.Controls.Add(this.cbProteine);
+            this.Controls.Add(this.cbStartePlate);
+            this.Controls.Add(this.cbSalad);
+            this.Controls.Add(this.cbPrincipal);
+            this.Controls.Add(this.tbCode);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -221,25 +225,26 @@
 
 		}
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.ComboBox comboBox3;
-		private System.Windows.Forms.ComboBox comboBox4;
-		private System.Windows.Forms.ComboBox comboBox5;
-		private System.Windows.Forms.ComboBox comboBox6;
+		private System.Windows.Forms.TextBox tbCode;
+		private System.Windows.Forms.ComboBox cbPrincipal;
+		private System.Windows.Forms.ComboBox cbSalad;
+		private System.Windows.Forms.ComboBox cbStartePlate;
+		private System.Windows.Forms.ComboBox cbProteine;
+		private System.Windows.Forms.ComboBox cbDrinck;
+		private System.Windows.Forms.ComboBox cbSoup;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
-	}
+		private System.Windows.Forms.Button btSave;
+		private System.Windows.Forms.Button btLoad;
+
+    }
 }
 
