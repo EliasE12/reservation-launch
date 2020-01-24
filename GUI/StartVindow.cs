@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GUI
 {
-	public partial class Form1 : Form
+	public partial class StartVindow : Form
 	{
-		public Form1()
+		public StartVindow()
 		{
 			InitializeComponent();
 		}
+
 	}
 }

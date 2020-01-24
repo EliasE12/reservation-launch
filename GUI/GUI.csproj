@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="StartVindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="StartVindow.Designer.cs">
+      <DependentUpon>StartVindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReservationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationView.Designer.cs">
+      <DependentUpon>ReservationView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="StartVindow.resx">
+      <DependentUpon>StartVindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationView.resx">
+      <DependentUpon>ReservationView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
