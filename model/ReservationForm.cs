@@ -10,7 +10,9 @@ namespace model
     public class ReservationForm
     {
 
-        private const String DATA_PATH = "";
+        private const String DATA_PATH = "..\\..\\..\\Data.txt";
+
+
 
         public List<String> readData()
         {
@@ -24,13 +26,12 @@ namespace model
                 while (line != null)
                 {
                     lisData.Add(line);
-
                     line = sr.ReadLine();
                 }
             }
             catch (IOException e)
             {
-
+                Console.WriteLine(e.Message);
             }
 
             return lisData;
@@ -47,12 +48,15 @@ namespace model
                 {
                     sw.WriteLine(listData.ElementAt(i));
                 }
-
                 sw.Close();
             }
-            catch (ArgumentNullException e)
+            catch (IOException e)
             {
-
+                Console.WriteLine(e.Message);
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
     }

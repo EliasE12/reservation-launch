@@ -1,0 +1,26 @@
+Código: A2453243663
+Tipo de arroz: Arroz Mixto
+Proteína: Fillete de Res
+Principio: Lentejas
+Sopa: Sancocho
+Ensalada: Ensalada Dulce
+Bebida: Limonada
+=======================
+=======================
+Código: W12425633
+Tipo de arroz: Arroz Mixto
+Proteína: Fillete de Res
+Principio: Frijoles
+Sopa: Trifasico
+Ensalada: Ensalada Roja
+Bebida: Jugo de Mora
+=======================
+=======================
+Código: J7885345
+Tipo de arroz: Arroz Integral
+Proteína: Muchacho
+Principio: Garbanzos
+Sopa: Ajiaco
+Ensalada: Ensalada Verde
+Bebida: Limonada
+=======================
