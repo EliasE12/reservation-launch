@@ -17,8 +17,10 @@ namespace GUI
 		private const int NUMBER_FIELDS = 6;
 
 		private ReservationForm rf;
+
 		private List<String> listData;
-		private int numberFieldsSelected; 
+		private int numberFieldsSelected;
+		private int numberDishesSelected;
 
 
 		public StartVindow()
@@ -27,6 +29,7 @@ namespace GUI
 			this.rf = new ReservationForm();
 			this.listData = new List<string>();
 			this.numberFieldsSelected = 0;
+			this.numberDishesSelected = 0;
 			
 			cbTypeRice.Items.Add("Ninguna");
 			cbTypeRice.Items.Add("Arroz Blanco");
@@ -72,13 +75,12 @@ namespace GUI
 			{
 				groupData();
 
-				if (this.listData.Count > 0 && this.numberFieldsSelected == NUMBER_FIELDS)
+				if ((this.listData.Count > 0 && this.numberFieldsSelected == NUMBER_FIELDS) && numberDishesSelected > 0)
 				{
 					listData.Add("=======================");
 					this.rf.writeData(listData);
-
-					this.listData.Clear();
-					this.numberFieldsSelected = 0;
+					resetFields();
+					
 				}
 				else
 				{
@@ -93,6 +95,7 @@ namespace GUI
 
 		private void btLoad_Click(object sender, EventArgs e)
 		{
+			resetFields();
 			ReservationView reservation = new ReservationView();
 			reservation.Show();
 			reservation.ViewInfo(rf);
@@ -103,16 +106,17 @@ namespace GUI
 		{
 			return tbCode.Text.Equals("");
 		}
-		
+
 		private void validateTypeRice()
 		{
 			if (cbTypeRice.SelectedItem != null)
 			{
 				this.numberFieldsSelected++;
+				this.listData.Add(cbTypeRice.SelectedItem.ToString());
+
 				if (!cbTypeRice.SelectedItem.Equals("Ninguna"))
 				{
-					this.listData.Add("Tipo de arroz: " + cbTypeRice.SelectedItem.ToString());
-					Console.WriteLine(listData.Count);
+					numberDishesSelected++;
 				}
 			}
 		}
@@ -122,11 +126,12 @@ namespace GUI
 			if (cbProtein.SelectedItem != null)
 			{
 				this.numberFieldsSelected++;
+				this.listData.Add(cbProtein.SelectedItem.ToString());
+
 				if (!cbProtein.SelectedItem.Equals("Ninguna"))
 				{
-					this.listData.Add("Proteína: " + cbProtein.SelectedItem.ToString());
+					numberDishesSelected++;
 				}
-
 			}
 		}
 
@@ -135,9 +140,11 @@ namespace GUI
 			if (cbStarterPlate.SelectedItem != null)
 			{
 				this.numberFieldsSelected++;
+				this.listData.Add(cbStarterPlate.SelectedItem.ToString());
+
 				if (!cbStarterPlate.SelectedItem.Equals("Ninguna"))
 				{
-					this.listData.Add("Principio: " + cbStarterPlate.SelectedItem.ToString());
+					numberDishesSelected++;
 				}
 			}
 		}
@@ -147,9 +154,11 @@ namespace GUI
 			if (cbSalad.SelectedItem != null)
 			{
 				this.numberFieldsSelected++;
+				this.listData.Add(cbSalad.SelectedItem.ToString());
+
 				if (!cbSalad.SelectedItem.Equals("Ninguna"))
 				{
-					this.listData.Add("Ensalada: " + cbSalad.SelectedItem.ToString());
+					numberDishesSelected++;
 				}
 			}
 		}
@@ -159,9 +168,11 @@ namespace GUI
 			if (cbSoup.SelectedItem != null)
 			{
 				this.numberFieldsSelected++;
+				this.listData.Add(cbSoup.SelectedItem.ToString());
+
 				if (!cbSoup.SelectedItem.Equals("Ninguna"))
 				{
-					this.listData.Add("Sopa: " + cbSoup.SelectedItem.ToString());
+					numberDishesSelected++;
 				}
 			}
 		}
@@ -171,9 +182,11 @@ namespace GUI
 			if (cbDrink.SelectedItem != null)
 			{
 				this.numberFieldsSelected++;
+				this.listData.Add(cbDrink.SelectedItem.ToString());
+
 				if (!cbDrink.SelectedItem.Equals("Ninguna"))
 				{
-					this.listData.Add("Bebida: " + cbDrink.SelectedItem.ToString());
+					numberDishesSelected++;
 				}
 			}
 		}
@@ -191,6 +204,29 @@ namespace GUI
 			validateSoup();
 			validateSalad();
 			validateDrink();
+		}
+
+		private void resetFields()
+		{
+			tbCode.Clear();
+
+			cbTypeRice.SelectedItem = null;
+			cbTypeRice.Text = "Seleccione una opcion";
+
+			cbProtein.SelectedItem = null;
+			cbProtein.Text = "Seleccione una opcion";
+
+			cbStarterPlate.SelectedItem = null;
+			cbStarterPlate.Text = "Seleccione una opcion";
+
+			cbSoup.SelectedItem = null;
+			cbSoup.Text = "Seleccione una opcion";
+
+			cbSalad.SelectedItem = null;
+			cbSalad.Text = "Seleccione una opcion";
+
+			cbDrink.SelectedItem = null;
+			cbDrink.Text = "Seleccione una opcion";
 		}
 	}
 }

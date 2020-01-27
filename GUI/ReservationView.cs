@@ -19,6 +19,7 @@ namespace GUI
         {
             InitializeComponent();
         }
+
         public void ViewInfo(ReservationForm reservationForm)
         {
             reservationListString = reservationForm.readData();

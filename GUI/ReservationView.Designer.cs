@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.reservationListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -43,19 +42,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Lista de Reservas";
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(283, 30);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(10, 300);
-            this.vScrollBar1.TabIndex = 3;
-            // 
             // reservationListBox
             // 
             this.reservationListBox.FormattingEnabled = true;
             this.reservationListBox.Location = new System.Drawing.Point(13, 30);
             this.reservationListBox.Name = "reservationListBox";
-            this.reservationListBox.Size = new System.Drawing.Size(267, 316);
+            this.reservationListBox.Size = new System.Drawing.Size(277, 316);
             this.reservationListBox.TabIndex = 4;
             // 
             // ReservationView
@@ -64,7 +56,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 365);
             this.Controls.Add(this.reservationListBox);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.label1);
             this.Name = "ReservationView";
             this.Text = "Vista";
@@ -75,7 +66,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.ListBox reservationListBox;
     }
 }

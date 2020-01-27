@@ -24,3 +24,12 @@ Sopa: Ajiaco
 Ensalada: Ensalada Verde
 Bebida: Limonada
 =======================
+=======================
+Código: A00348478
+Arroz Blanco
+Pescado Frito
+Pasta
+Ninguna
+Ensalada Verde
+Limonada
+=======================
